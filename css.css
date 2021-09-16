@@ -197,10 +197,18 @@ text-align: center;
     justify-content: center;
 }
 .footer-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
+    /* display: grid;
+    grid-template-columns: 1fr 4fr 4fr;
     column-gap: 50px;
-    padding: 30px ;
+    padding: 30px ; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 30px;
 }
 .footer-logo img {
     display: block;
@@ -222,32 +230,46 @@ max-width: 40%;
 
 
 .social-logo {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 300px;
+    max-height: 100%;
+    flex-wrap: wrap;
 }
 
 .facebook {
+    display: flex;
+    flex-wrap: wrap;
+    width: 25px;
+    height: 25px;
     background-image: url(./images/icon-facebook.svg);
     background-repeat: no-repeat;
-
 }
 .facebook:hover {
+    background-repeat: no-repeat;
     background-image: url(./images/facebook-hover.svg);
 }
-
 .twiter {
+    display: flex;
+    flex-wrap: wrap;
+    width: 25px;
+    height: 25px;
     background-image: url(./images/icon-twitter.svg);
     background-repeat: no-repeat;
-
 }
 .twiter:hover {
+    background-repeat: no-repeat;
     background-image: url(./images/twiter-hover.svg);
 }
-
 .instagram {
-background-image: url(./images/icon-instagram.svg);
-background-repeat: no-repeat;
+    display: flex;
+    flex-wrap: wrap;
+    width: 25px;
+    height: 25px;
+    background-image: url(./images/icon-instagram.svg);
+    background-repeat: no-repeat;
 }
 .instagram:hover {
     background-image: url(./images/instagram-hover.svg);
@@ -270,11 +292,18 @@ cursor: pointer;
         flex-direction: column;
         font-size: 15px;
     }
+   
     main {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
     }
     
 button {
@@ -353,7 +382,7 @@ button {
     align-items: center;
    }
     .footer-wrapper {
-        width: max-content;
+        width: 100%;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
